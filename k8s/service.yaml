@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vnc-research-example
+  namespace: research-example
+spec:
+  selector:
+    app: vnc-research-example
+  ports:
+    - name: novnc
+      port: 6080
+      targetPort: 6080
+    - name: vnc
+      port: 5901
+      targetPort: 5901
